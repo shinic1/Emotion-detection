@@ -1,12 +1,7 @@
 from flask import Flask, request, render_template
 from EmotionDetection.emotion_detection import emotion_detector
 
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-import requests
-
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+app = Flask("Emotion Detection")
 
 @app.route("/emotionDetector")
 def sent_analyzer():
